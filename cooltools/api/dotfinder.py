@@ -332,6 +332,7 @@ def clust_2D_pixels(
         # branching_factor=50, (it's default)
         compute_labels=True,
     )
+    pixels = pixels.copy(order='C') # Bo-UT
     brc.fit(pixels)
     # # following is redundant,
     # # as it's done here:
